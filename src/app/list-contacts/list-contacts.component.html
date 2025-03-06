@@ -1,0 +1,27 @@
+<!-- Listado de Contactos -->
+<div class="max-w-2xl mx-auto mt-10 bg-white p-6 rounded shadow">
+    <h2 class="text-xl font-bold mb-4">Mis Contactos</h2>
+    <ul>
+
+        @if(contactManage.Contacts().length > 0) {
+            @for (contact of contactManage.Contacts(); track contact.id) {
+                <span>{{contact.nombre}} - {{contact.email}}</span>
+                <button class="bg-red-600 text-white mx-2 px-3 py-1 rounded">Eliminar</button>
+            }
+        } @else {
+            <span>No hay contactos</span>
+        }
+
+    </ul>
+</div>
+
+<app-contact></app-contact>
+
+<!-- <li class="flex justify-between items-center border-b p-2">
+    
+    
+</li>
+<li class="flex justify-between items-center border-b p-2">
+    <span>María Gómez - maria&#64;example.com</span>
+    <button class="bg-red-600 text-white px-3 py-1 rounded">Eliminar</button>
+</li> -->
