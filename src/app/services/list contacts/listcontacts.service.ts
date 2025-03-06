@@ -9,7 +9,7 @@ import { tap } from 'rxjs';
 })
 export class ListcontactsService {
 
-  urlBase: string = "http://localhost:3000/api/contactos";
+  urlBase: string = "https://user-contacts-mongo.vercel.app/api/contactos";
   private login = inject(LoginserviceService);
   userId: string = "";
   private contactsSignal = signal<Contact[]>([])
